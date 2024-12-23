@@ -1,0 +1,7 @@
+.homepage{
+    background-image: url("./src/assets/Image/frame.png");
+
+}
+html , body{
+    overflow-x: hidden;
+}
