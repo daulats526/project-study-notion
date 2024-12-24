@@ -17,4 +17,4 @@
   },
 ];
 
-export default NavbarLinks;
+export { NavbarLinks };

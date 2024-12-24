@@ -7,7 +7,6 @@ import { useNavigate, useParams } from "react-router-dom"
 
 import ConfirmationModal from "../components/common/ConfirmationModal"
 import Footer from "../components/common/Footer"
-// import RatingStars from "../components/common/RatingStars"
 import CourseAccordionBar from "../components/core/Course/CourseAccordionBar"
 import CourseDetailsCard from "../components/core/Course/CourseDetailsCard.jsx"
 import { formatDate } from "../services/formatDate"
@@ -174,10 +173,10 @@ const CourseDetails = ()=> {
               <p className="space-x-3 pb-4 text-3xl font-semibold text-slate-5">
                 Rs. {price}
               </p>
-              <button className="yellowButton" onClick={handleBuyCourse}>
+              <button className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900" onClick={handleBuyCourse}>
                 Buy Now
               </button>
-              <button className="blackButton">Add to Cart</button>
+              <button className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Add to Cart</button>
             </div>
           </div>
           {/* Courses Card */}
@@ -216,7 +215,7 @@ const CourseDetails = ()=> {
                 </div>
                 <div>
                   <button
-                    className="text-yellow-25"
+                    className="text-yellow-200"
                     onClick={() => setIsActive([])}
                   >
                     Collapse all sections

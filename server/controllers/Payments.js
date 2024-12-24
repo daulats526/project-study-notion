@@ -34,7 +34,7 @@ exports.capturePayment = async (req, res) => {
 
       // Check if the user is already enrolled in the course
       const uid = new mongoose.Types.ObjectId(userId)
-      if (course.studentsEnroled.includes(uid)) {
+      if (course.studentsEnrolled.includes(uid)) {
         return res
           .status(200)
           .json({ success: false, message: "Student is already Enrolled" })
@@ -43,7 +43,7 @@ exports.capturePayment = async (req, res) => {
       // Add the price of the course to the total amount
       total_amount += course.price
     } catch (error) {
-      console.log(error)
+      console.log("capture payment error:",error)
       return res.status(500).json({ success: false, message: error.message })
     }
   }
